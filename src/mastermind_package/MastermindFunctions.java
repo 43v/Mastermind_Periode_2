@@ -5,8 +5,11 @@ import java.util.Random;
 public class MastermindFunctions
 {
 
-    public final String[] cbColors =
-    { "geel", "paars", "groen", "blauw", "oranje", "rood", "leeg", "wit", "zwart" };
+    public final String[] kleuren =
+    { "geel", "paars", "groen", "blauw", "oranje", "rood" };
+
+    public final String[] altkleuren =
+    { "leeg", "wit", "zwart" };
 
     public String[] mastermindcodegenerator()
     {
@@ -17,7 +20,7 @@ public class MastermindFunctions
 
 	for (int i = 0; i < 4; i++)
 	{
-	    code[i] = cbColors[rnd.nextInt(5)];
+	    code[i] = kleuren[rnd.nextInt(5)];
 	}
 
 	return code;
