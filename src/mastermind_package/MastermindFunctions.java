@@ -26,4 +26,35 @@ public class MastermindFunctions
 	return code;
     }
 
+    public static String evaluatePosition(String[] playerCode, String[] code, int pos, String[] altkleuren)
+    {
+
+	if (playerCode[pos].equals(code[pos]))
+	{
+	    return altkleuren[2];  // zwart 
+	}
+	
+	else if (playerCode[pos].equals(code[0]) || playerCode[pos].equals(code[1]) || 
+	         playerCode[pos].equals(code[2]) || playerCode[pos].equals(code[3])) {
+	    return altkleuren[1]; // wit 
+	}
+	
+	else {
+	    
+	   return altkleuren[0];  // leeg 
+	}
+	
+    }
+    
+public static boolean wincheck (String[] playerCode, String[] code) {
+   
+    for (int i = 0; i < playerCode.length; i++) {
+       
+        if (!playerCode[i].equals(code[i])) {
+            return false;  
+        }
+    }
+  
+    return true;  
+}
 }
